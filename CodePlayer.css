@@ -1,0 +1,87 @@
+<style type="text/css">
+
+body{
+font-family : arial;
+margin:0;
+}
+
+.btn{
+position:relative;
+float:left;
+ padding-top:10;
+padding-left:16;
+padding-right:16;
+height:32;
+border: 1px solid grey;
+border-right:none;
+}
+
+#TopBar{
+width:400;
+margin : 0 auto ;
+position:relative;
+float:left;
+top:4;
+left:490;
+}
+
+#image{
+position:relative;
+float:left;
+height:30;
+top:-10;
+margin-top:10;
+ }
+ 
+#container{
+width:100%;
+height:50;
+background-color:#EDEDED;
+position:relative;
+float:left;
+}
+
+#logo{
+position:relative ;
+float:left;
+top:16;
+padding-left:10;
+}
+
+#htmlButton{
+border-top-left-radius : 15% ;
+border-bottom-left-radius : 15% ;
+background-color:#E8F2FF;
+}
+
+#OutputButton{
+border-right: 1px solid grey;
+border-top-right-radius : 15% ;
+border-bottom-right-radius : 15% ;
+background-color:#E8F2FF;
+}
+
+#clean{
+ clear : both ;
+}
+
+textArea{
+resize : none;
+height:93.3%;
+width:24.9%;
+border-right : 1px solid grey ;
+position:relative;
+float:left;
+}
+
+#outputArea{
+height:93.3%;
+width:25%;
+border-right : 1px solid grey ;
+position:relative;
+float:left;
+}
+
+
+
+</style>

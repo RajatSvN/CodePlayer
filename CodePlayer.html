@@ -1,0 +1,121 @@
+<html>
+
+<head><title></title></head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="CodePlayer.css">
+
+<body>
+
+	<div id="container">
+	
+	    <div id="logo">
+		    CodePlayer
+		</div>
+		
+		<div id="image">
+		     <img src="jsBinIcon2.png">
+		</div>
+		 
+		 <div id="TopBar">
+				<div id="htmlButton" class="Btn">Html</div>
+				
+				<div id="cssButton" class="Btn">CSS</div>
+				
+				<div id="javascriptButton" class="Btn">JavaScript</div>
+				
+				<div id="OutputButton" class="Btn">Output</div>
+				
+		 </div>
+	</div>
+	 
+		<div id="clean"></div>
+	 
+	<div id="Page">
+	
+				<textarea id="htmlArea" >Your HTML here....Clear this before use </textarea>	
+	
+				<textarea id="cssArea" style="display:none;">Your CSS here....Clear this before use </textarea>	
+	
+				<textarea id="javaScriptArea" style="display:none;">Your JavaScript here....Clear this before use</textarea>	
+	
+				<iframe id="outputArea"> </iframe>	
+	
+	</div>
+	
+<script type="text/javascript">
+ var flag1=0 ; var flag2 = 0; 
+ 
+ 
+ 
+$("#htmlButton").mouseover( function(){
+
+$(this).css("background-color","#F5F9FF");
+
+}).mouseleave(function(){
+
+$(this).css("background-color","#E8F2FF");
+
+});
+
+
+$("#OutputButton").mouseover( function(){
+
+$(this).css("background-color","#F5F9FF");
+
+}).mouseleave(function(){
+
+$(this).css("background-color","#E8F2FF");
+
+});
+
+$("#cssButton").click(function(){
+
+if(flag1==0){
+$(this).css("background-color","rgb(232,242,255)");
+flag1=1;
+}
+else{
+$(this).css("background-color","#EDEDED");
+flag1=0;
+}
+
+});
+
+
+$("#javascriptButton").click(function(){
+
+if(flag2==0){
+$(this).css("background-color","rgb(232,242,255)");
+flag2=1;
+}
+else{
+$(this).css("background-color","#EDEDED");
+flag2=0;
+}
+
+});
+
+$("textarea").on("change keyup paste" , function(){
+
+$("#outputArea").contents().find("html").html('<html><head></head><style type="text/css">'+$("#cssArea").val()+'</style>'+'<body>'+$("#htmlArea").val()+'</body></html>'); 
+document.getElementById("outputArea").contentWindow.eval($("#javaScriptArea").val());
+
+});
+
+$("#cssButton").click(function(){
+
+$("#cssArea").toggle();
+
+});
+
+$("#javascriptButton").click(function(){
+
+$("#javaScriptArea").toggle();
+
+});
+
+</script>
+
+</body>
+</html>
